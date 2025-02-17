@@ -93,6 +93,12 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+    server: {
+      cors: {
+        origin: ['https://kmaba.cfd'],
+      },
+      allowedHosts: ['kmaba.cfd'],
+    },
     plugins: [
       nodePolyfills({
         include: ['path', 'buffer', 'process'],
